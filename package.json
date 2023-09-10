@@ -2,10 +2,10 @@
   "name": "parcel-start-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://RuslanMirasov.github.io/parcel-start",
+  "homepage": "https://RuslanMirasov.github.io/brainst",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-start/"
+    "build": "parcel build src/*.html --public-url /brainst/"
   },
   "repository": {
     "type": "git",
