@@ -1,0 +1,54 @@
+$preloader_background: $white_text;
+$preloader_width: 84px;
+$preloader_height: 84px;
+
+.preloader {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: $preloader_background;
+  z-index: 1000;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 400ms ease-out 0ms;
+  }
+
+  .preloader__content {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: $preloader_width;
+    height: $preloader_height;
+    svg {
+      max-width: 50%;
+      max-height: 50%;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      border-radius: 200px;
+      border-left: 2px solid $color;
+      border-top: 2px solid rgba(0, 0, 0, 0.1);
+      border-right: 2px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+      animation: 600ms linear 0s infinite rotate;
+    }
+  }
+}

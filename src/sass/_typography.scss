@@ -1,0 +1,166 @@
+/*title styles*/
+$title_font_family: 'semibold', serif;
+$title_font_weight: 600;
+/*h1*/
+$h1_font_size: 36px;
+$h1_font_size_tablet: 36px;
+$h1_font_size_mobil: 36px;
+/*h2*/
+$h2_font_size: 18px;
+$h2_font_size_tablet: 18px;
+$h2_font_size_mobil: 18px;
+/*h3*/
+$h3_font_size: 18px;
+$h3_font_size_tablet: 18px;
+$h3_font_size_mobil: 18px;
+/*h4*/
+$h4_font_size: 14px;
+$h4_font_size_tablet: 14px;
+$h4_font_size_mobil: 14px;
+/*h5*/
+$h5_font_size: 10px;
+$h5_font_size_tablet: 10px;
+$h5_font_size_mobil: 10px;
+/*h6*/
+$h6_font_size: 10px;
+$h6_font_size_tablet: 10px;
+$h6_font_size_mobil: 10px;
+
+/*subtitle styles*/
+$subtitle_font_family: 'regular', serif;
+$subtitle_font_size: 16px;
+$subtitle_font_size_tablet: 16px;
+$subtitle_font_size_mobil: 14px;
+$subtitle_line_height: 1.5;
+$subtitle_font_weight: 400;
+
+.titleBox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+  .forBtn {
+    margin-top: 14px;
+  }
+}
+
+.title {
+  display: block;
+  width: 100%;
+  font-family: $title_font_family;
+  font-weight: $title_font_weight;
+  line-height: 1.2;
+  color: $black_text;
+  font-style: normal;
+  text-transform: uppercase;
+  &.title--h1 {
+    @media screen and (min-width: 1280px) {
+      font-size: $h1_font_size;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      font-size: $h1_font_size_tablet;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: $h1_font_size_mobil;
+    }
+  }
+  &.title--h2 {
+    @media screen and (min-width: 1280px) {
+      font-size: $h2_font_size;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      font-size: $h2_font_size_tablet;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: $h2_font_size_mobil;
+    }
+  }
+  &.title--h3 {
+    @media screen and (min-width: 1280px) {
+      font-size: $h3_font_size;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      font-size: $h3_font_size_tablet;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: $h3_font_size_mobil;
+    }
+  }
+  &.title--h4 {
+    @media screen and (min-width: 1280px) {
+      font-size: $h4_font_size;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      font-size: $h4_font_size_tablet;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: $h4_font_size_mobil;
+    }
+  }
+  &.title--h5 {
+    @media screen and (min-width: 1280px) {
+      font-size: $h5_font_size;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      font-size: $h5_font_size_tablet;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: $h5_font_size_mobil;
+    }
+  }
+  &.title--h6 {
+    @media screen and (min-width: 1280px) {
+      font-size: $h6_font_size;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      font-size: $h6_font_size_tablet;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: $h6_font_size_mobil;
+    }
+  }
+  &.red {
+    color: $white;
+  }
+}
+
+.subtitle {
+  display: block;
+  width: 100%;
+  font-style: normal;
+  font-family: $subtitle_font_family;
+  line-height: $subtitle_line_height;
+  color: $black_text;
+  font-weight: $subtitle_font_weight;
+  &.red {
+    color: $white;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: $subtitle_font_size;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    font-size: $subtitle_font_size_tablet;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: $subtitle_font_size_mobil;
+  }
+}
+
+.text {
+  display: block;
+  width: 100%;
+  font-family: 'regular', serif;
+  font-size: 14px;
+  line-height: 1.28571;
+  &.red {
+    color: $white;
+  }
+}
+
+.color {
+  color: $color;
+}
+
+.italic {
+  font-style: italic;
+}

@@ -1,0 +1,55 @@
+/*rotate [animation: 4s linear 0s infinite alternate rotate] */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: 4s linear 0s infinite rotate;
+}
+
+/*standatr animations*/
+[data-animation='fade-left'] {
+  transform: translate(-20px, 0px);
+}
+[data-animation='fade-right'] {
+  transform: translate(20px, 0px);
+}
+[data-animation='fade-top'] {
+  transform: translate(0px, -20px);
+}
+[data-animation='fade-bottom'] {
+  transform: translate(0px, 20px);
+}
+[data-animation='scale'] {
+  transform: translate(0px, 0px) scale(0.8);
+  transform-origin: center center;
+}
+[data-animation='scaleX'] {
+  transform: translate(0px, 0px) scaleX(0);
+  transform-origin: left center;
+}
+[data-animation='fade-in'],
+[data-animation='fade-left'],
+[data-animation='fade-right'],
+[data-animation='fade-top'],
+[data-animation='fade-bottom'],
+[data-animation='scaleX'],
+[data-animation='scale'] {
+  opacity: 0;
+  transition: opacity 0.8s $cubic, transform 0.8s $cubic;
+  &.animate {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 1;
+  }
+}
+[data-animation='fade-in'] {
+  transition: opacity 1.5s $cubic;
+}
+[data-animation='scale'] {
+  transition: opacity 1s $cubic, transform 1s $cubic;
+}

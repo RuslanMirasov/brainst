@@ -1,0 +1,157 @@
+/*default button*/
+$button_font_famili: 'semibold', serif;
+$button_fontweight: 500;
+$button_border: 1px solid $color;
+$button_border_radius: 15px;
+$button_background: $color;
+$button_background_hover: $color;
+$button_color: $white_text;
+$button_color_hover: $black_text;
+/*desctop*/
+$button_height: 48px;
+$button_fontsize: 14px;
+$button_padding: 8px 28px;
+/*tablet*/
+$button_height_tablet: 48px;
+$button_fontsize_tablet: 14px;
+$button_padding_tablet: 8px 28px;
+/*mobil*/
+$button_height_mobil: 38px;
+$button_fontsize_mobil: 14px;
+$button_padding_mobil: 8px 20px;
+
+/*big*/
+$button_big_height: 50px;
+$button_big_fontsize: 18px;
+
+/*small*/
+$button_small_height: 30px;
+$button_small_fontsize: 12px;
+$button_small_border_radius: 8px;
+$button_small_padding: 8px 16px;
+
+/*button--border*/
+$button_border_border: 1px solid $color;
+$button_border_border_hover: 1px solid $color;
+$button_border_background: rgba(0, 0, 0, 0);
+$button_border_background_hover: $color;
+$button_border_color: $black_text;
+$button_border_color_hover: $white_text;
+
+/*button--gray*/
+$button_gray_border: 1px solid $gray20;
+$button_gray_border_hover: 1px solid $color;
+$button_gray_background: rgba(0, 0, 0, 0);
+$button_gray_background_hover: $color;
+$button_gray_color: $gray50;
+$button_gray_color_hover: $white_text;
+
+.forBtn {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  gap: 16px;
+  &.ta--c {
+    justify-content: center;
+  }
+  &.ta--r {
+    justify-content: flex-end;
+  }
+  @media screen and (max-width: 767px) {
+    gap: 14px;
+  }
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  line-height: 1.2;
+  font-family: $button_font_famili;
+  font-weight: $button_fontweight;
+  background: $button_background;
+  border: $button_border;
+  border-radius: $button_border_radius;
+  color: $button_color;
+  transition: $cubic;
+  user-select: none;
+  /*desctop*/
+  @media screen and (min-width: 1280px) {
+    height: $button_height;
+    font-size: $button_fontsize;
+    padding: $button_padding;
+  }
+  /*tablet*/
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    height: $button_height_tablet;
+    font-size: $button_fontsize_tablet;
+    padding: $button_padding_tablet;
+  }
+  /*mobil*/
+  @media screen and (max-width: 767px) {
+    height: $button_height_mobil;
+    font-size: $button_fontsize_mobil;
+    padding: $button_padding_mobil;
+  }
+
+  &.full {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &.big {
+    height: $button_big_height;
+    font-size: $button_big_fontsize;
+  }
+
+  &.small {
+    height: $button_small_height;
+    font-size: $button_small_fontsize;
+    border-radius: $button_small_border_radius;
+    padding: $button_small_padding;
+  }
+
+  &.button--border {
+    border: $button_border_border;
+    background: $button_border_background;
+    color: $button_border_color;
+    &:hover,
+    &:focus,
+    &.active {
+      border: $button_border_border_hover;
+      background: $button_border_background_hover;
+      color: $button_border_color_hover;
+    }
+  }
+
+  &.button--gray {
+    border: $button_gray_border;
+    background: $button_gray_background;
+    color: $button_gray_color;
+    &:hover,
+    &:focus,
+    &.active {
+      border: $button_gray_border_hover;
+      background: $button_gray_background_hover;
+      color: $button_gray_color_hover;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.active {
+    background: $button_background_hover;
+    color: $button_color_hover;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
